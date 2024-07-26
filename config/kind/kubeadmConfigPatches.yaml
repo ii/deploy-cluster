@@ -1,0 +1,16 @@
+kubeadmConfigPatches:
+  - |
+    apiVersion: kubeadm.k8s.io/v1beta3
+    kind: ClusterConfiguration
+    metadata:
+      name: config
+    apiServer:
+      extraArgs:
+        "audit-webhook-config-file": "/etc/kubernetes/policies/sink.yaml"
+        "audit-policy-file": "/etc/kubernetes/policies/policy.yaml"
+      extraVolumes:
+        - name: audit-policies
+          hostPath: /etc/kubernetes/policies
+          mountPath: /etc/kubernetes/policies
+          readOnly: true
+          pathType: "DirectoryOrCreate"

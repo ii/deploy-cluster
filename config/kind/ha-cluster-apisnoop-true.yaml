@@ -1,0 +1,18 @@
+  - role: control-plane
+    extraMounts:
+      - hostPath: ../audit
+        containerPath: /etc/kubernetes/policies
+        readOnly: True
+    extraPortMappings:
+      - containerPort: 30432
+        hostPort: 5432
+  - role: control-plane
+    extraMounts:
+      - hostPath: ../audit
+        containerPath: /etc/kubernetes/policies
+        readOnly: True
+  - role: control-plane
+    extraMounts:
+      - hostPath: ../audit
+        containerPath: /etc/kubernetes/policies
+        readOnly: True

@@ -1,0 +1,20 @@
+# generated kind config
+config/kind/kind_config.yaml
+
+# direnv .envrc files
+.envrc
+
+# Emacs save files
+*~
+\#*\#
+.\#*
+
+# Vim-related files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+
+# OSX trash
+.DS_Store
