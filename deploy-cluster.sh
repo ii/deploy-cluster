@@ -6,7 +6,7 @@ set -o pipefail
 
 export CONFIG_DIR=${CONFIG_DIR:-"${PWD}/config"}
 
-export KIND_IMAGE=${KIND_IMAGE:-"kindest/node:v1.30.2@sha256:ecfe5841b9bee4fe9690f49c118c33629fa345e3350a0c67a5a34482a99d6bba"}
+export KIND_IMAGE=${KIND_IMAGE:-"kindest/node:v1.31.0@sha256:53df588e04085fd41ae12de0c3fe4c72f7013bba32a20e7325357a1ac94ba865"}
 export KIND_NET=${KIND_NET:-"kind"}
 export KIND_DISABLE_CNI=${KIND_DISABLE_CNI:-"false"}
 export KIND_DISABLE_CNI=${KIND_DISABLE_CNI,,}
